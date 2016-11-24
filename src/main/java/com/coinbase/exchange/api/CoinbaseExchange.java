@@ -31,7 +31,7 @@ public interface CoinbaseExchange {
     PaymentMethod[] getPaymentMethods() throws NoSuchAlgorithmException, InvalidKeyException, CloneNotSupportedException, IOException;
 
     public Order getOrder(String order_id) throws CloneNotSupportedException, NoSuchAlgorithmException, InvalidKeyException, IOException;
-    public Product[] getProducts() throws IOException;
+    public Product[] getProducts() throws IOException, CloneNotSupportedException, NoSuchAlgorithmException, InvalidKeyException;
     public Fill[] getFills();
     public String getMarketDataOrderBook(String product, String level) throws IOException;
     public ProductOrderBook getMarketDataProductOrderBook(String product, String level) throws IOException;
