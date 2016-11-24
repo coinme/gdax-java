@@ -1,11 +1,12 @@
 package com.coinbase.exchange.api.marketdata;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
  * Created by irufus on 2/28/15.
  */
-public class Message {
+public class Message  implements Serializable {
     private String type;
     private Long sequence;
     private String order_id;
