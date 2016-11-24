@@ -12,7 +12,8 @@ import java.security.NoSuchAlgorithmException;
 
 public interface CoinbaseExchange {
     /**
-     * * 
+     * *
+     *
      * @return
      * @throws IOException
      * @throws InvalidKeyException
@@ -20,20 +21,29 @@ public interface CoinbaseExchange {
      * @throws CloneNotSupportedException
      */
     public Account[] getAccounts() throws IOException, InvalidKeyException, NoSuchAlgorithmException, CloneNotSupportedException;
-    
+
     public Account getAccount(String accountid);
+
     public AccountHistory[] getAccountHistory(String accountid) throws CloneNotSupportedException, NoSuchAlgorithmException, InvalidKeyException, IOException;
+
     public Hold[] getHolds(String accountid) throws CloneNotSupportedException, NoSuchAlgorithmException, InvalidKeyException, IOException;
+
     public Order createOrder(NewOrderSingle order) throws CloneNotSupportedException, NoSuchAlgorithmException, InvalidKeyException, IOException;
+
     public String cancelOrder(String orderid) throws CloneNotSupportedException, NoSuchAlgorithmException, InvalidKeyException, IOException;
+
     public Order[] getOpenOrders() throws NoSuchAlgorithmException, InvalidKeyException, CloneNotSupportedException, IOException;
 
     PaymentMethod[] getPaymentMethods() throws NoSuchAlgorithmException, InvalidKeyException, CloneNotSupportedException, IOException;
 
     public Order getOrder(String order_id) throws CloneNotSupportedException, NoSuchAlgorithmException, InvalidKeyException, IOException;
+
     public Product[] getProducts() throws IOException, CloneNotSupportedException, NoSuchAlgorithmException, InvalidKeyException;
+
     public Fill[] getFills();
+
     public String getMarketDataOrderBook(String product, String level) throws IOException;
+
     public ProductOrderBook getMarketDataProductOrderBook(String product, String level) throws IOException;
 
 

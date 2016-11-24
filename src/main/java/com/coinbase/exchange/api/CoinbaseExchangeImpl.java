@@ -25,7 +25,7 @@ import java.security.NoSuchAlgorithmException;
 
 /**
  * @author msmyers
- * @author  irufus
+ * @author irufus
  * @since 2/25/15
  */
 public class CoinbaseExchangeImpl implements CoinbaseExchange {

@@ -12,7 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.lang.reflect.Type;
 import java.math.BigDecimal;
-import java.util.Currency;
 
 /**
  * @author msmyers

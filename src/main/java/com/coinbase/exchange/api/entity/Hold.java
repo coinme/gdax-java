@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 /**
  * Created by irufus on 2/18/15.
  */
-public class Hold  implements Serializable {
+public class Hold implements Serializable {
     private String created_at;
     private String update_at;
     private String order_id;

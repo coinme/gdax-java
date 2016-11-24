@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 /**
  * Created by irufus on 2/25/15.
  */
-public abstract class NewOrderSingle  implements Serializable {
+public abstract class NewOrderSingle implements Serializable {
     private String client_oid; //optional
     private String type; //default is limit, other types are market and stop
     private String side;

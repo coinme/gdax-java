@@ -3,17 +3,16 @@ package com.coinbase.exchange.api.entity;
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
  * Created by irufus on 7/31/15.
  */
-public class NewLimitOrderSingle extends NewOrderSingle{
+public class NewLimitOrderSingle extends NewOrderSingle {
     private BigDecimal price;
     private BigDecimal size;
 
-    public NewLimitOrderSingle(){
+    public NewLimitOrderSingle() {
         setType("limit");
     }
 

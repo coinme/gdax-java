@@ -8,8 +8,8 @@ import java.io.Serializable;
 
 /**
  * @author msmyers
- * @since 11/24/16
  * @see {https://docs.gdax.com/#list-payment-methods}
+ * @since 11/24/16
  */
 public class PaymentMethodLimit implements Serializable {
 

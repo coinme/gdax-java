@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by irufus on 8/3/15.
  */
-public class ProductOrderBook  implements Serializable {
+public class ProductOrderBook implements Serializable {
 
     private Integer sequence;
     private List<List<String>> bids;

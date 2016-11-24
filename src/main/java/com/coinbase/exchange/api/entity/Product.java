@@ -4,7 +4,6 @@ import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 /**
  * Created by irufus on 2/25/15.

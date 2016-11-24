@@ -2,7 +2,6 @@ package com.coinbase.exchange.api.entity;
 
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
-import org.joda.money.Money;
 
 import java.io.Serializable;
 

@@ -12,7 +12,7 @@ public class NewMarketOrderSingle extends NewOrderSingle {
     private BigDecimal size; //optional: Desired amount in BTC
     private BigDecimal funds; //optional: Desired amount of fiat funds to use
 
-    public NewMarketOrderSingle(){
+    public NewMarketOrderSingle() {
         setType("market");
     }
 

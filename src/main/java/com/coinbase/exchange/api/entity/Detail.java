@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * Created by irufus on 2/25/15.
  */
-public class Detail  implements Serializable {
+public class Detail implements Serializable {
     private String order_id;
     private Integer trade_id;
     private String product_id;

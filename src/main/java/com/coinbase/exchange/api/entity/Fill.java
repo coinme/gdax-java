@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 /**
  * Created by irufus on 2/18/15.
  */
-public class Fill  implements Serializable {
+public class Fill implements Serializable {
     private Integer trade_id;
     private String product_id;
     private Double size;

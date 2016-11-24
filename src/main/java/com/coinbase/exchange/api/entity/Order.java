@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 /**
  * Created by irufus on 2/18/15.
  */
-public class Order  implements Serializable {
+public class Order implements Serializable {
     private String id;
     private BigDecimal size;
     private BigDecimal price;
