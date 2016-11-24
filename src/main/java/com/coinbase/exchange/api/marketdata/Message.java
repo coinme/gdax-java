@@ -4,7 +4,9 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
- * Created by irufus on 2/28/15.
+ * @author irufus
+ * @author msmyers
+ * @since 3/2/15
  */
 public class Message  implements Serializable {
     private String type;
