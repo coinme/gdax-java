@@ -9,6 +9,7 @@ import java.math.BigDecimal;
  * @since 3/2/15
  */
 public class Message implements Serializable {
+
     private String type;
     private Long sequence;
     private String order_id;
