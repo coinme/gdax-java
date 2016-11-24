@@ -1,5 +1,8 @@
 package com.coinbase.exchange.api.entity;
 
+import com.google.common.base.MoreObjects;
+import com.google.common.base.Objects;
+
 import java.math.BigDecimal;
 
 /**
@@ -29,5 +32,27 @@ public class NewMarketOrderSingle extends NewOrderSingle {
     @Override
     public void setFunds(BigDecimal funds) {
         this.funds = funds;
+    }
+
+    @Override
+    public String toString() {
+        return MoreObjects.toStringHelper(this)
+                .add("size", size)
+                .add("funds", funds)
+                .toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof NewMarketOrderSingle)) return false;
+        NewMarketOrderSingle that = (NewMarketOrderSingle) o;
+        return Objects.equal(getSize(), that.getSize()) &&
+                Objects.equal(getFunds(), that.getFunds());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(getSize(), getFunds());
     }
 }

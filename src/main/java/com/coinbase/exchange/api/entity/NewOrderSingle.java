@@ -1,11 +1,15 @@
 package com.coinbase.exchange.api.entity;
 
+import com.google.common.base.MoreObjects;
+import com.google.common.base.Objects;
+
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
  * Created by irufus on 2/25/15.
  */
-public abstract class NewOrderSingle {
+public abstract class NewOrderSingle  implements Serializable {
     private String client_oid; //optional
     private String type; //default is limit, other types are market and stop
     private String side;
@@ -59,5 +63,35 @@ public abstract class NewOrderSingle {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return MoreObjects.toStringHelper(this)
+                .add("client_oid", client_oid)
+                .add("type", type)
+                .add("side", side)
+                .add("product_id", product_id)
+                .add("stp", stp)
+                .add("funds", funds)
+                .toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof NewOrderSingle)) return false;
+        NewOrderSingle that = (NewOrderSingle) o;
+        return Objects.equal(getClient_oid(), that.getClient_oid()) &&
+                Objects.equal(getType(), that.getType()) &&
+                Objects.equal(getSide(), that.getSide()) &&
+                Objects.equal(getProduct_id(), that.getProduct_id()) &&
+                Objects.equal(getStp(), that.getStp()) &&
+                Objects.equal(getFunds(), that.getFunds());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(getClient_oid(), getType(), getSide(), getProduct_id(), getStp(), getFunds());
     }
 }

@@ -1,11 +1,15 @@
 package com.coinbase.exchange.api.entity;
 
+import com.google.common.base.MoreObjects;
+import com.google.common.base.Objects;
+
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
  * Created by irufus on 2/18/15.
  */
-public class Fill {
+public class Fill  implements Serializable {
     private Integer trade_id;
     private String product_id;
     private Double size;
@@ -77,5 +81,39 @@ public class Fill {
 
     public void setTrade_id(Integer trade_id) {
         this.trade_id = trade_id;
+    }
+
+    @Override
+    public String toString() {
+        return MoreObjects.toStringHelper(this)
+                .add("trade_id", trade_id)
+                .add("product_id", product_id)
+                .add("size", size)
+                .add("order_id", order_id)
+                .add("created_at", created_at)
+                .add("fee", fee)
+                .add("settled", settled)
+                .add("side", side)
+                .toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Fill)) return false;
+        Fill fill = (Fill) o;
+        return Objects.equal(getTrade_id(), fill.getTrade_id()) &&
+                Objects.equal(getProduct_id(), fill.getProduct_id()) &&
+                Objects.equal(getSize(), fill.getSize()) &&
+                Objects.equal(getOrder_id(), fill.getOrder_id()) &&
+                Objects.equal(getCreated_at(), fill.getCreated_at()) &&
+                Objects.equal(getFee(), fill.getFee()) &&
+                Objects.equal(getSettled(), fill.getSettled()) &&
+                Objects.equal(getSide(), fill.getSide());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(getTrade_id(), getProduct_id(), getSize(), getOrder_id(), getCreated_at(), getFee(), getSettled(), getSide());
     }
 }
