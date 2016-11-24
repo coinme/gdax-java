@@ -1,7 +1,6 @@
 package com.coinbase.exchange.api;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;
@@ -81,6 +80,16 @@ public class CoinbaseExchangeImpl implements CoinbaseExchange {
         String json = generateGetRequestJSON(endpoint);
         Gson gson = new Gson();
         Order[] orders = gson.fromJson(json, Order[].class);
+        return orders;
+    }
+
+    @Override
+    public PaymentMethod[] getPaymentMethods() throws NoSuchAlgorithmException, InvalidKeyException, CloneNotSupportedException, IOException {
+        String endpoint = "/payment-methods";
+        String json = generateGetRequestJSON(endpoint);
+        System.out.println(json);
+        Gson gson = new Gson();
+        PaymentMethod[] orders = gson.fromJson(json, PaymentMethod[].class);
         return orders;
     }
 

@@ -27,6 +27,9 @@ public interface CoinbaseExchange {
     public Order createOrder(NewOrderSingle order) throws CloneNotSupportedException, NoSuchAlgorithmException, InvalidKeyException, IOException;
     public String cancelOrder(String orderid) throws CloneNotSupportedException, NoSuchAlgorithmException, InvalidKeyException, IOException;
     public Order[] getOpenOrders() throws NoSuchAlgorithmException, InvalidKeyException, CloneNotSupportedException, IOException;
+
+    PaymentMethod[] getPaymentMethods() throws NoSuchAlgorithmException, InvalidKeyException, CloneNotSupportedException, IOException;
+
     public Order getOrder(String order_id) throws CloneNotSupportedException, NoSuchAlgorithmException, InvalidKeyException, IOException;
     public Product[] getProducts() throws IOException;
     public Fill[] getFills();
